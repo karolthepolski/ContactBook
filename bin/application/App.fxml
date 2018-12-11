@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AppController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+                  <MenuItem fx:id="mBarLogout" mnemonicParsing="false" onAction="#mBarLogout" text="Logout" />
+            <MenuItem id="mBarFileExit" fx:id="mBarFileExit" mnemonicParsing="false" onAction="#mBarFileExit" text="Quit" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <SplitPane dividerPositions="0.2505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <items>
+        <AnchorPane maxWidth="200.0" minWidth="200.0" prefWidth="200.0" scaleShape="false" SplitPane.resizableWithParent="false">
+          <children>
+                  <Button fx:id="btnAdd" alignment="CENTER" layoutX="10.0" layoutY="412.0" mnemonicParsing="false" onAction="#btnAdd" prefHeight="25.0" prefWidth="180.0" text="Add Contact" />
+                  <Label alignment="CENTER" layoutX="25.0" layoutY="16.0" prefHeight="30.0" prefWidth="150.0" text="Contact" textAlignment="CENTER">
+                     <font>
+                        <Font name="Consolas" size="30.0" />
+                     </font></Label>
+                  <TextField fx:id="inpFName" layoutX="10.0" layoutY="89.0" prefHeight="25.0" prefWidth="180.0" promptText="First Name" />
+                  <TextField fx:id="inpLName" layoutX="10.0" layoutY="129.0" prefHeight="25.0" prefWidth="180.0" promptText="Last Name" />
+                  <TextField fx:id="inpNumber" layoutX="10.0" layoutY="169.0" prefHeight="25.0" prefWidth="180.0" promptText="Number" />
+                  <TextField fx:id="inpEmail" layoutX="10.0" layoutY="209.0" prefHeight="25.0" prefWidth="180.0" promptText="E-mail" />
+          </children>
+        </AnchorPane>
+        <AnchorPane maxWidth="678.0" minWidth="200.0" prefHeight="451.0" prefWidth="680.0" scaleShape="false" SplitPane.resizableWithParent="false">
+          <children>
+            <Label fx:id="lblMain" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="661.0" style="&#10;" text="Contacts" textAlignment="CENTER" wrapText="false">
+                     <font>
+                        <Font name="Consolas" size="35.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="contactsTable" layoutX="14.0" layoutY="60.0" prefHeight="380.0" prefWidth="661.0">
+                    <columns>
+                        <TableColumn fx:id="tcId" prefWidth="30.0" text="ID" />
+                      <TableColumn fx:id="tcFname" prefWidth="140.0" text="First Name" />
+                      <TableColumn fx:id="tcLname" prefWidth="140.0" text="Last Name" />
+                        <TableColumn fx:id="tcNumber" minWidth="0.0" prefWidth="130.0" text="Number" />
+                        <TableColumn fx:id="tcEmail" minWidth="0.0" prefWidth="180.0" text="Email" />
+                        <TableColumn prefWidth="40.0" text="x" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="btnRefresh" alignment="CENTER" layoutX="14.0" layoutY="23.0" mnemonicParsing="false" onAction="#btnRefresh" prefHeight="25.0" prefWidth="69.0" text="Refresh" />
+                  <Button fx:id="btnDelete" layoutX="612.0" layoutY="23.0" mnemonicParsing="false" onAction="#btnDelete" text="Delete" />
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+    <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+      <children>
+            <Text id="txtMain" fx:id="txtBottom" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="590.13671875" />
+        <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+      </children>
+      <padding>
+        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+      </padding>
+    </HBox>
+  </children>
+</VBox>
