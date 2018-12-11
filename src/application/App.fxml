@@ -57,8 +57,7 @@
                       <TableColumn fx:id="tcFname" prefWidth="140.0" text="First Name" />
                       <TableColumn fx:id="tcLname" prefWidth="140.0" text="Last Name" />
                         <TableColumn fx:id="tcNumber" minWidth="0.0" prefWidth="130.0" text="Number" />
-                        <TableColumn fx:id="tcEmail" minWidth="0.0" prefWidth="180.0" text="Email" />
-                        <TableColumn prefWidth="40.0" text="x" />
+                        <TableColumn fx:id="tcEmail" minWidth="0.0" prefWidth="220.0" text="Email" />
                     </columns>
                   </TableView>
                   <Button fx:id="btnRefresh" alignment="CENTER" layoutX="14.0" layoutY="23.0" mnemonicParsing="false" onAction="#btnRefresh" prefHeight="25.0" prefWidth="69.0" text="Refresh" />
